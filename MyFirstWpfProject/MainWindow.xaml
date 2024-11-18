@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyFirstWpfProject"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="300" Width="600">
     <Grid>
         <!--<TextBlock HorizontalAlignment="Center" Margin="0,91,0,0" TextWrapping="Wrap" Text="Hola Mundo" VerticalAlignment="Top"/>-->
         <!-- <Button Content="Click aqui" Height="50" Width="150" Click="Button_Click" FontSize="32" Margin="325,243,325,141"></Button> -->
@@ -53,7 +53,7 @@
             <Button.FontSize>40</Button.FontSize>
             <TextBlock >2DAM – Desarrollo de interfaces</TextBlock>
         </Button>-->
-        
+
         <!--EJERCICIO 2-->
         <!--<WrapPanel Orientation="Horizontal">
             <Button Content="Botón 1" Height="30"/>
@@ -62,7 +62,7 @@
             <Button Content="Botón 4" Height="30"/>
             <Button Content="Botón 5" Height="30"/>
         </WrapPanel>-->
-        
+
         <!--EJERCICIO 3-->
         <!--<Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -85,16 +85,56 @@
         <TextBlock Grid.Column="2" Grid.Row="2" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center">
             TEXTO
         </TextBlock>-->
-        
+
         <!--EJERCICIO 4-->
         <!--<Button Content="Click aquí" Margin="20" Click="Button_Click"></Button>-->
-        
+
         <!--EJERCICIO 5-->
-        <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <!--<WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Button Content="Click Event" Width="100" Height="50" Click="Button_Click" />
             <Button Content="Mouse Enter" Width="100" Height="50" MouseEnter="Button_MouseEnter"/>
             <Button Content="Right Click Event" Width="100" Height="50" MouseRightButtonDown="Button_MouseRightButtonDown" />
-        </WrapPanel>
+        </WrapPanel>-->
+
+        <!--<Button Content="Haz Click aquí" Height="60" Width="150" Click="Button_Click"></Button>-->
+
+        <!--<StackPanel>
+            <TextBlock Margin="10" Foreground="Red"> This is a TextBlock conrtol <LineBreak/> and it comes with a very long text</TextBlock>
+
+            <TextBlock Margin="10" TextTrimming="CharacterEllipsis" Foreground="Green"> This is a TextBlock conrtol with text that may not be rendered completly, which will be indicated with am elipsis</TextBlock>
+
+            <TextBlock Margin="10" TextWrapping="Wrap" Foreground="Blue"> This is a TextBlock conrtol with automatically wrapped text, using the TextWrapping property</TextBlock>
+        </StackPanel>-->
+
+        <!--<TextBlock Margin="10" TextWrapping="Wrap">TextBlock with <Bold>bold</Bold> <Italic>italic</Italic> and <Underline>underlined</Underline> text</TextBlock>-->
+
         
+        <!--<TextBlock Margin="10" TextWrapping="Wrap">This text has a <Hyperlink RequestNavigate="Hyperlink_RequestNavigate" NavigateUri="https://www.google.com">link</Hyperlink> in it</TextBlock>-->
+
+        <!--<StackPanel>
+            <TextBlock FontWeight="Bold" Foreground="Red" FontStyle="Italic">
+                Este texto aplicará todos los estilos de cada palbra
+            </TextBlock>
+            
+            <TextBlock> Este texto tiene una palabra en <Run FontWeight="Bold">negrita</Run>, otra en <Run Foreground="Red">rojo</Run>
+            y otra en <Run FontStyle="Italic">cursiva</Run> </TextBlock>
+        </StackPanel>-->
+
+        <!--<TextBlock>
+            Este es un texto normal con un <Span Foreground="Green">
+                <Run FontWeight="Bold">texto en negrita</Run>
+                y aqui tienes un
+                <Hyperlink NavigateUri="https://www.google.com" Foreground="Blue">
+                    <Run Text="enlace" FontStyle="Italic" />
+                </Hyperlink>
+            </Span>
+        </TextBlock>-->
+
+        <StackPanel Margin="10">
+            <Label Content="_Name:" Target="{Binding ElementName=txtName}"/>
+            <TextBox Name="txtName" Width="200" HorizontalAlignment="Left"/>
+            <Label Content="Ma_il:" Target="{Binding ElementName=txtMail}"/>
+            <TextBox Name="txtMail" Width="200" HorizontalAlignment="Left"/>
+        </StackPanel>
     </Grid>
 </Window>

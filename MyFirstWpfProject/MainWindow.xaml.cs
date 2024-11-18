@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -52,6 +53,8 @@ namespace MyFirstWpfProject
             //grid.Children.Add(btn);
         }
 
+
+
         //private void Button_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         //{
         //    MessageBox.Show("El botón izquierdo ha sido presionado");
@@ -74,20 +77,45 @@ namespace MyFirstWpfProject
 
 
         //EJERCICIO 4
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Has hecho click");
-        }
+        //private void Button_Click(object sender, RoutedEventArgs e)
+        //{
+        //    MessageBox.Show("Has hecho click");
+        //}
 
         //EJERCICIO 5
-        private void Button_MouseEnter(object sender, MouseEventArgs e)
-        {
-            MessageBox.Show("Evento MouseEnter - Detecta cuando el ratón entra en el botón.");  
-        }
+        //private void Button_Click(object sender, RoutedEventArgs e)
+        //{
+        //    MessageBox.Show("Has hecho click");
+        //}
 
-        private void Button_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        //private void Button_MouseEnter(object sender, MouseEventArgs e)
+        //{
+        //    MessageBox.Show("Evento MouseEnter - Detecta cuando el ratón entra en el botón.");  
+        //}
+
+        //private void Button_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        //{
+        //    MessageBox.Show("Un evento de clic específico con el botón izquierdo");
+        //}
+
+        //ADVERTENCIA DE ERROR
+        //private void Button_Click(object sender, RoutedEventArgs e)
+        //{
+        //    string s = null;
+        //    try
+        //    {        
+        //    s.Trim();
+        //    }
+        //    catch (Exception ex) {
+        //        MessageBox.Show("A handle exception just ocurred: " +  ex.Message , "Exception Sample",
+        //            MessageBoxButton.OK, MessageBoxImage.Warning);
+        //    }
+        //}
+
+        private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
         {
-            MessageBox.Show("Un evento de clic específico con el botón izquierdo");
+            Process.Start(e.Uri.AbsoluteUri);
+            e.Handled = true;
         }
     }
 }
